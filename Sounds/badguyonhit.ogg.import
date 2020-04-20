@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/badguyonhit.ogg-50b056af2bafc3770ef57f0d60945b4c.oggstr"
+
+[deps]
+
+source_file="res://Sounds/badguyonhit.ogg"
+dest_files=[ "res://.import/badguyonhit.ogg-50b056af2bafc3770ef57f0d60945b4c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

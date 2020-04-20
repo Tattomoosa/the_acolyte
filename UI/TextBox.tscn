@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/ui_panel.png" type="Texture" id=1]
+[ext_resource path="res://font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UI/TextBox.gd" type="Script" id=3]
+
+[node name="TextBox" type="Node2D"]
+visible = false
+script = ExtResource( 3 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 480.0
+margin_bottom = 270.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 120.0
+margin_top = 206.0
+margin_right = -120.0
+margin_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource( 1 )
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextBoxContent" type="Label" parent="Control/NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 7.97861
+margin_top = 6.35297
+margin_right = -10.0214
+margin_bottom = -9.64703
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.431373, 0.431373, 0.431373, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}

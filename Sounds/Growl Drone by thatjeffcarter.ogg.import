@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Growl Drone by thatjeffcarter.ogg-2049b2bfab95c9b5c1997769628fff5b.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Growl Drone by thatjeffcarter.ogg"
+dest_files=[ "res://.import/Growl Drone by thatjeffcarter.ogg-2049b2bfab95c9b5c1997769628fff5b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

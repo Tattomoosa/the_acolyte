@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Camera.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 241.446, 0.586349 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2.69894, 137.175 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 245.475, 29.6664 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 34.2911, 149.698 )
+
+[node name="Camera2D" type="Camera2D"]
+current = true
+script = ExtResource( 1 )
+
+[node name="Edges" type="Node2D" parent="."]
+
+[node name="North" type="Area2D" parent="Edges"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Edges/North"]
+position = Vector2( 0, -135.105 )
+shape = SubResource( 1 )
+
+[node name="South" type="Area2D" parent="Edges"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Edges/South"]
+position = Vector2( 0.418121, 137.907 )
+shape = SubResource( 1 )
+
+[node name="East" type="Area2D" parent="Edges"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Edges/East"]
+position = Vector2( 242.51, 0.966423 )
+shape = SubResource( 2 )
+
+[node name="West" type="Area2D" parent="Edges"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Edges/West"]
+position = Vector2( -241.794, -0.826004 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 524288
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1.34262, -159.826 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -1.78275, 161.542 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -270.94, -1.89402 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 274.438, 5.32595 )
+shape = SubResource( 4 )

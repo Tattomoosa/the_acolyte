@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Fireball by liamg-sfx.ogg-5f49ce7be209a62fbd6ab85213b323c1.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Fireball by liamg-sfx.ogg"
+dest_files=[ "res://.import/Fireball by liamg-sfx.ogg-5f49ce7be209a62fbd6ab85213b323c1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
