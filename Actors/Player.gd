@@ -47,7 +47,10 @@ func get_input():
 			var bodies = get_enemies_hit()
 			for body in bodies:
 				var obj = body.get_parent()
-				if 'is_knocked_out' in obj and obj.is_knocked_out:
+				if 'is_knocked_out' in obj and \
+					'offering_started' in obj and \
+						not obj.offering_started and \
+						obj.is_knocked_out:
 					# print('attacking a knocked out person')
 					var offset = obj.position - position
 					obj.get_parent().remove_child(obj)
@@ -114,7 +117,7 @@ func take_damage(obj):
 	velocity = (position - obj.position).normalized() * 2
 	# velocity = obj.velocity.normalized() * 2
 	if is_dragging:
-		end_dragging()
+		call_deferred('end_dragging')
 	sprite.frame = 0
 	$OnHit.play()
 	is_recovering = true
@@ -186,7 +189,7 @@ func face_dragging():
 func on_offering_completed():
 	offerings_completed += 1
 	if offerings_completed >= offerings_to_win:
-		get_tree().change_scene("res://Ending/Ending.tscn")
+		var _s = get_tree().change_scene("res://Ending/Ending.tscn")
 	update_offerings_ui()
 	max_health += 1
 	health = max_health
@@ -199,4 +202,4 @@ func play(string):
 	sprite.play(string)
 
 func on_no_health():
-		get_tree().change_scene("res://UI/GameOver.tscn")
+		var _s = get_tree().change_scene("res://UI/GameOver.tscn")

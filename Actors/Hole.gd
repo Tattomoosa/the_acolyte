@@ -39,6 +39,7 @@ func _physics_process(delta):
 			offering.position += direction.normalized() * delta * drag_speed
 			offering.timer_sprite.visible = false
 			offering.current_recovery_time = 0.0
+			offering.offering_started = true
 		else:
 			offering.set_being_offered()
 			offerings.remove(i)

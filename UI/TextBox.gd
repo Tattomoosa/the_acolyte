@@ -31,8 +31,7 @@ func hide():
 func _process(_delta):
 	if not visible:
 		return
-	if Input.is_action_just_pressed('ui_accept'):
-		# hide()
+	if Input.is_action_just_pressed('attack'):
 		next()
 
 

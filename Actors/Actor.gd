@@ -26,7 +26,7 @@ func _ready():
 	damageArea = $DamageArea
 	if damageArea:
 		# print(name + ' damage area connected')
-		damageArea.connect('body_entered', self, 'take_damage')
+		var _s = damageArea.connect('body_entered', self, 'take_damage')
 	else:
 		print(name + ' damage area is null!')
 

@@ -35,7 +35,7 @@ func _ready():
 
 func intro():
 	player.play('priest')
-	textbox.connect('conversation_ended', self, 'intro_2')
+	var _s = textbox.connect('conversation_ended', self, 'intro_2')
 
 func intro_2():
 	player.play('transform')
@@ -45,7 +45,7 @@ func intro_2():
 	trigger_textbox([
 		"And I am the one who feeds it.",
 	])
-	textbox.connect('conversation_ended', self, 'intro_3')
+	var _s = textbox.connect('conversation_ended', self, 'intro_3')
 
 func intro_3():
 	textbox.disconnect('conversation_ended', self, 'intro_3')

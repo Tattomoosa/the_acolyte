@@ -15,6 +15,7 @@ var recovery_time = 30.0
 var current_recovery_time = 0.0
 
 var is_being_offered = false
+var offering_started = false
 onready var shape : CollisionShape2D = $CollisionShape2D
 
 var is_casting = false
